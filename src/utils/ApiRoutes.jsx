@@ -1,0 +1,70 @@
+const ApiRoutes = {
+    SIGN_IN:{
+        path:'/user/login',
+        authenticate:false
+    },
+    SIGN_UP:{
+        path:'/user/createUser',
+        authenticate:true
+    },
+    GET_USERS:{
+        path:'/user',
+        authenticate:true
+    },
+    GET_USER:{
+        path:'/user',
+        authenticate:true
+    },
+    DELETE_CARTITEM:{
+        path:'/user/deletecartitem',
+        authenticate:true
+    },
+    ORDER_PRODUCT:{
+        path:'/user/order',
+        authenticate:true
+    },
+    UPDATE_USER:{
+        path:'/user/update',
+        authenticate:true
+    },
+    SEND_EMAIL:{
+        path:'/user/email-send',
+        authenticate:true
+    },
+    VERIFY_CODE:{
+        path:'/user/verify',
+        authenticate:true
+    },
+     RESET_PASSWORD:{
+        path:'/user/reset-password',
+        authenticate:true
+    },
+    GET_PRODUCTS:{
+        path:'/product',
+        authenticate:true
+    },
+    CREATE_PRODUCT:{
+        path:'/product/createproduct',
+        authenticate:true
+    },
+    DELETE_PRODUCT:{
+        path:'/product/deleteproduct',
+        authenticate:true
+    },
+    UPDATE_PRODUCT:{
+        path:'/product/updateproduct',
+        authenticate:true
+    },
+    ORDER_PRODUCTS:{
+        path:'/order/userorder',
+        authenticate:true
+    },
+    GET_REPORT:{
+        path:'/order/getsalereport',
+        authenticate:true
+    },
+
+
+}
+
+export default ApiRoutes

@@ -1,0 +1,66 @@
+body{
+    background-color: #093b29;
+}
+.signupform {
+    border: 10px groove skyblue;
+    margin-left: 500px;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    background-color: #093b29;
+
+}
+
+.loginform {
+    border: 10px groove skyblue;
+height:350px;
+width:400px;
+margin-left: 500px;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    background-color: #000;
+
+}
+.sidebar :hover{
+background-color:darkorange ;
+}
+#carouselExampleCaptions{
+    height:500px;
+ width: auto;
+ align-items: center;
+}
+
+.usercards :hover{
+    background-color:darkorange;
+}
+.productcards{
+    display: flex;
+    justify-content: space-around;
+
+}
+.usercartpage{
+    background: linear-gradient(to top left, rgba(205, 156, 242, 1), rgba(246, 243, 255, 1)) 
+}
+.first{
+    background-image: -webkit-linear-gradient("https://thumbs.dreamstime.com/z/online-shopping-flat-concept-gradients-web-solution-platform-template-e-commerce-business-order-delivery-service-d-195060662.jpg");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 400px;
+  flex-direction: column;
+  gap: 20px;
+}
+.card-wrapper{
+background-color: cornflowerblue;
+}
+.gradient-custom {
+    /* fallback for old browsers */
+    background: #cd9cf2;
+  
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to top left, rgba(205, 156, 242, 1), rgba(246, 243, 255, 1));
+  
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to top left, rgba(205, 156, 242, 1), rgba(246, 243, 255, 1))
+  }
