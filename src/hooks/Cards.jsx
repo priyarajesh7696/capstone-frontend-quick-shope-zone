@@ -63,7 +63,7 @@ let cartcount = count + 1
               settoggle(true);
               setCount(count - 1);
               // navigate("/user");
-              window.location.reload(false)
+              window.location.reload(true)
             };
           
   // console.log(count)
