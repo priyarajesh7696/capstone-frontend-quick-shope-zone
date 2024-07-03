@@ -103,7 +103,7 @@ setNewdata(id,price,total)
       { authenticate: ApiRoutes.DELETE_CARTITEM.authenticate });
      
       getData();
-      window.location.reload(false)
+      window.location.reload(true)
       
   };
   
