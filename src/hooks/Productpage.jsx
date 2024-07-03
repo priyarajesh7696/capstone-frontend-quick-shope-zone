@@ -14,7 +14,7 @@ import ApiRoutes from "../utils/ApiRoutes";
 import Cartitem from "./Cartitem";
 import {useNavigate } from "react-router-dom";
 import Billingdetails from "./Billingdetails";
-  
+import { Link } from "react-router-dom";
 import useRazorpay from "react-razorpay";
 import Form from "react-bootstrap/Form";
 import Modal from "react-bootstrap/Modal";
@@ -60,14 +60,18 @@ function Productpage() {
   
     <Container className=" h-100 py-5 w-100">
          
-    <div className="justify-content-center align-items-center h-100">
+    <div className="justify-content-center align-items-center h-100" onClick={navigate("/")}>
+   
      
         <Card className="usercartpage shopping-cart " style={{ borderRadius: "15px" }}>
           <CardBody className="text-black">
+          <Link to="/" className="nav-link d-flex justify-content-start align-content-start m3-5" href="index.html">
+            <span>Back</span>
+          </Link>
             <h2 className="pt-2 text-center fw-bold text-uppercase bg-light rounded ">
              ProductPage
             </h2>
-          
+            
 
             { 
                  
