@@ -36,7 +36,7 @@ let cartcount = count + 1
                 `${ApiRoutes.UPDATE_USER.path}/${userId}`,
                 { cartcount ,resdata}
               );
-              window.location.reload(false)
+              window.location.reload(true)
              
             };
   const decrement = async (id) => {
