@@ -59,10 +59,6 @@ const ApiRoutes = {
         path:'/order/userorder',
         authenticate:true
     },
-    ORDER_SUCCESS:{
-        path:'/order/success',
-        authenticate:true
-    },
     GET_REPORT:{
         path:'/order/getsalereport',
         authenticate:true
