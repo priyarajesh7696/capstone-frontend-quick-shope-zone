@@ -29,9 +29,15 @@ async function displayRazorpay() {
         alert("Razorpay SDK failed to load. Are you online?");
         return;
     }
+let result = await AxiosService.get(
+        `${ApiRoutes.ORDER_PRODUCTS.path}`,
 
-    const result = await axios.post("https://capstone-backend-quick-shope-5.onrender.com/order/userorder");
-console.log(result)
+        {
+          authenticate: ApiRoutes.ORDER_PRODUCTS.authenticate,
+        }
+      );
+//     const result = await axios.post("https://capstone-backend-quick-shope-5.onrender.com/order/userorder");
+// console.log(result)
     if (!result) {
         alert("Server error. Are you online?");
         return;
@@ -55,7 +61,14 @@ console.log(result)
                 razorpaySignature: response.razorpay_signature,
             };
             let id = sessionStorage.getItem('id')
-            const result = await axios.post(`https://capstone-backend-quick-shope-5.onrender.com/order/success`, data);
+          let result = await AxiosService.get(
+        `${ApiRoutes.ORDER_SUCCESS.path}`,
+
+        {
+          authenticate: ApiRoutes.ORDER_SUCCESS.authenticate,
+        }
+      );
+            // const result = await axios.post(`https://capstone-backend-quick-shope-5.onrender.com/order/success`, data);
 
             alert(result.data.msg);
         },
