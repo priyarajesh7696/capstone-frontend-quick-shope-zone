@@ -30,7 +30,7 @@ async function displayRazorpay() {
         return;
     }
 
-    const result = await axios.post("http://localhost:8000/order/userorder");
+    const result = await axios.post("https://capstone-backend-quick-shope-5.onrender.com/order/userorder");
 console.log(result)
     if (!result) {
         alert("Server error. Are you online?");
@@ -55,7 +55,7 @@ console.log(result)
                 razorpaySignature: response.razorpay_signature,
             };
             let id = sessionStorage.getItem('id')
-            const result = await axios.post(`http://localhost:8000/order/success`, data);
+            const result = await axios.post(`https://capstone-backend-quick-shope-5.onrender.com/order/success`, data);
 
             alert(result.data.msg);
         },
