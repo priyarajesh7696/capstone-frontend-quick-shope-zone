@@ -30,7 +30,13 @@ async function displayRazorpay() {
         return;
     }
 
-    const result = await axios.post("http://localhost:8000/order/userorder");
+    let result = await AxiosService.get(
+        `${ApiRoutes.ORDER_PRODUCTS.path}`,
+
+        {
+          authenticate: ApiRoutes.ORDER_PRODUCTS.authenticate,
+        }
+      );
 console.log(result)
     if (!result) {
         alert("Server error. Are you online?");
@@ -55,12 +61,18 @@ console.log(result)
                 razorpaySignature: response.razorpay_signature,
             };
             let id = sessionStorage.getItem('id')
-            const result = await axios.post(`http://localhost:8000/order/success`, data);
+            let result = await AxiosService.get(
+                `${ApiRoutes.ORDER_SUCCESS.path}`,
+        
+                {
+                  authenticate: ApiRoutes.ORDER_SUCCESS.authenticate,
+                },data
+              );
 
             alert(result.data.msg);
         },
         prefill: {
-            name: "Soumya Dey",
+            name: "Priya",
             email: "rameshpriyait@gmail.com",
             contact: "7418182749",
         },
