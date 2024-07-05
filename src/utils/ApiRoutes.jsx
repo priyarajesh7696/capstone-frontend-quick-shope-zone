@@ -55,7 +55,7 @@ const ApiRoutes = {
         path:'/product/updateproduct',
         authenticate:true
     },
-    ORDER_PRODUCTS:{
+    ORDER_USERORDER:{
         path:'/order/userorder',
         authenticate:true
     },

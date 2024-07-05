@@ -59,7 +59,12 @@ async function displayRazorpay() {
       receipt: `recieptno_${Math.random()}`,
   };
 
-    const result = await axios.post("http://localhost:8000/order/userorder",paymentOptions);
+  let result = await AxiosService.post(
+    `${ApiRoutes.ORDER_USERORDER.path}`,
+
+    {
+      authenticate: ApiRoutes.ORDER_USERORDER.authenticate,
+    },paymentOptions);
 console.log(result)
     if (!result) {
         alert("Server error. Are you online?");
@@ -97,9 +102,14 @@ console.log(result)
             let id = sessionStorage.getItem('id')
             console.log(data)
            
-            const result = await axios.post(`http://localhost:8000/order/success`, data);
+            let result = await AxiosService.post(
+              `${ApiRoutes.ORDER_SUCCESS.path}`,
+      
+              {
+                authenticate: ApiRoutes.ORDER_SUCCESS.authenticate,
+              },data);
 
-            // alert(result.data);
+            alert(result.data);
         },
         prefill: {
             name: "priya",

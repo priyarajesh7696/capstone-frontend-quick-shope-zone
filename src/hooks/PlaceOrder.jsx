@@ -30,11 +30,11 @@ async function displayRazorpay() {
         return;
     }
 
-    let result = await AxiosService.get(
-        `${ApiRoutes.ORDER_PRODUCTS.path}`,
+    let result = await AxiosService.post(
+        `${ApiRoutes.ORDER_USERORDER.path}`,
 
         {
-          authenticate: ApiRoutes.ORDER_PRODUCTS.authenticate,
+          authenticate: ApiRoutes.ORDER_USERORDER.authenticate,
         }
       );
 console.log(result)
@@ -61,7 +61,7 @@ console.log(result)
                 razorpaySignature: response.razorpay_signature,
             };
             let id = sessionStorage.getItem('id')
-            let result = await AxiosService.get(
+            let result = await AxiosService.post(
                 `${ApiRoutes.ORDER_SUCCESS.path}`,
         
                 {
